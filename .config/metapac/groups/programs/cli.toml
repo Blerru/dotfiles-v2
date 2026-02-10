@@ -14,4 +14,5 @@ arch = [
     "7zip",
     "trash-cli",
     "fd",
+    "zoxide",
 ]
