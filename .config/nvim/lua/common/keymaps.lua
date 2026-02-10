@@ -344,4 +344,11 @@ return {
             mode = { "n", "v" },
         },
     },
+    ccc = {
+        pick = {
+            bind = "<leader>cc",
+            description = "Open ccc color picker at cursor.",
+            mode = { "n", "v" },
+        },
+    },
 }
