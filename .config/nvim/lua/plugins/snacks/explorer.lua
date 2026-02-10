@@ -7,7 +7,8 @@ return {
     ---@type snacks.Config
     opts = {
         explorer = {
-            replace_netrw = true, -- Replace netrw with the snacks explorer
+            replace_netrw = false, -- Replace netrw with the snacks explorer
+            auto_open = false,
             trash = true, -- Use the system trash when deleting files
             win = {
                 list = {
