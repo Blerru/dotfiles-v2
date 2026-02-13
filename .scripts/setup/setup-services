@@ -2,8 +2,6 @@
 
 # TODO: Make it so that the service are only enabled if the package is installed
 
-sudo systemctl enable lemurs.service
-
 systemctl enable --user --now pipewire.service
 systemctl enable --user --now pipewire-pulse.service
 systemctl enable --user --now wireplumber.service
