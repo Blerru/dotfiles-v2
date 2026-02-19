@@ -4,7 +4,6 @@ return {
     opts = {
         ensure_installed = {
             -- Formatters
-            "beautysh",
             "clang-format",
             "prettier",
             "stylua",
@@ -21,6 +20,8 @@ return {
             "typescript-lanaguage-server",
             "zig",
             "pyright",
+            "zls",
+            "rust-analyzer",
 
             -- DAPs
             "codelldb",

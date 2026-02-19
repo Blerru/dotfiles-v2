@@ -79,6 +79,7 @@ return {
             ["zls"] = {},
             ["ts_ls"] = {},
             ["pyright"] = {},
+            ["rust_analyzer"] = {},
         }
 
         for server, configuration in pairs(language_servers) do
