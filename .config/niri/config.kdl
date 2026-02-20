@@ -45,7 +45,7 @@ input {
 }
 
 layout {
-    gaps 0
+    gaps 2
     center-focused-column "never"
     empty-workspace-above-first
     default-column-display "normal"
@@ -71,9 +71,8 @@ layout {
     }
 
     border {
-        off
         width 1
-        active-color "#5b6078"
+        active-color "#363a4f"
         inactive-color "#363a4f"
         urgent-color "#BD9191"
     }
@@ -282,14 +281,16 @@ layer-rule {
 }
 
 window-rule {
+    geometry-corner-radius 4
+    clip-to-geometry true
+}
+
+window-rule {
     match is-floating=true
 
     border {
-        on
+        active-color "#5b6078"
     }
-
-    geometry-corner-radius 4
-    clip-to-geometry true
 }
 
 // Firefox picture-in-picture

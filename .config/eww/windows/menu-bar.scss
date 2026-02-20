@@ -4,6 +4,7 @@ $spacing-1: 0.125rem;
 $spacing-2: 0.25rem;
 $spacing-3: 0.5rem;
 $spacing-4: 1rem;
+$border-radius: 8px;
 
 .menu-bar {
     font-family: "Jetbrains Mono", sans-serif;
@@ -11,8 +12,14 @@ $spacing-4: 1rem;
     font-weight: normal;
     color: $text;
 
-    background: $base;
+    background: rgba(
+        $color: $base,
+        $alpha: 0.9999999
+    ); // HACK: Make it so that the black background that is normally drawn behind the gtk window (either by the compositor, gtk or both?) isn't.
+    border-top: 1px solid #363a4f;
     padding: 0 $spacing-4;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
 }
 
 .menu-bar > box {
