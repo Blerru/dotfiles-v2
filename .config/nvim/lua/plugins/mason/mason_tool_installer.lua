@@ -8,6 +8,7 @@ return {
             "prettier",
             "stylua",
             "black",
+            "prettypst",
 
             -- LSPs
             "bash-language-server",
@@ -22,6 +23,7 @@ return {
             "pyright",
             "zls",
             "rust-analyzer",
+            "tinymist",
 
             -- DAPs
             "codelldb",

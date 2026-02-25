@@ -31,6 +31,7 @@ return {
             "bash",
             "mermaid",
             "ebnf",
+            "typst",
         }
 
         nvim_treesitter.install(languages):wait(10 * 60 * 1000)

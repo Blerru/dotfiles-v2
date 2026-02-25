@@ -31,6 +31,9 @@ return {
 
             -- Black
             python = { "black" },
+
+            -- Typst
+            typst = { "prettypst" },
         },
         format_on_save = {},
         default_format_opts = {

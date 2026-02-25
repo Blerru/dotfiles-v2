@@ -80,6 +80,7 @@ return {
             ["ts_ls"] = {},
             ["pyright"] = {},
             ["rust_analyzer"] = {},
+            ["tinymist"] = {},
         }
 
         for server, configuration in pairs(language_servers) do
