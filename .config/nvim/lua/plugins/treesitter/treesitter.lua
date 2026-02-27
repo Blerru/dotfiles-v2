@@ -32,6 +32,7 @@ return {
             "mermaid",
             "ebnf",
             "typst",
+            "make",
         }
 
         nvim_treesitter.install(languages):wait(10 * 60 * 1000)
