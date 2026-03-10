@@ -31,7 +31,7 @@
 }
 
 element {
-    padding: 1px ;
+    padding: 4px ;
     cursor:  pointer;
     spacing: 5px ;
     border:  0;
@@ -87,7 +87,7 @@ element-icon {
 window {
     width: 700px;
     height: 400px;
-    padding:          5;
+    padding:          6;
     background-color: @background;
     border:           1;
     border-color:     @window-border-color;
@@ -136,16 +136,16 @@ button selected {
 }
 num-filtered-rows {
     expand:     false;
-    text-color: Gray;
+    text-color: @subtext0;
 }
 num-rows {
     expand:     false;
-    text-color: Gray;
+    text-color: @subtext0;
 }
 textbox-num-sep {
     expand:     false;
     str:        "/";
-    text-color: Gray;
+    text-color: @subtext0;
 }
 inputbar {
     padding:    1px ;
@@ -161,7 +161,7 @@ entry {
     text-color:        @normal-foreground;
     cursor:            text;
     spacing:           0;
-    placeholder-color: Gray;
+    placeholder-color: @subtext0;
     placeholder:       "Type to filter";
 }
 prompt {
