@@ -24,6 +24,8 @@ return {
             "zls",
             "rust-analyzer",
             "tinymist",
+            "gopls",
+            "marksman",
 
             -- DAPs
             "codelldb",

@@ -4,6 +4,7 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
+export GOPATH=$HOME/.go
 PATH="$PATH:~/.cargo/bin"
 
 # From https://github.com/YaLTeR/niri/discussions/2241

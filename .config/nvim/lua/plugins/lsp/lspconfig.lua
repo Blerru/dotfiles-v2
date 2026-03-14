@@ -81,6 +81,8 @@ return {
             ["pyright"] = {},
             ["rust_analyzer"] = {},
             ["tinymist"] = {},
+            ["gopls"] = {},
+            ["marksman"] = {},
         }
 
         for server, configuration in pairs(language_servers) do

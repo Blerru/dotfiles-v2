@@ -33,6 +33,7 @@ return {
             "ebnf",
             "typst",
             "make",
+            "go",
         }
 
         nvim_treesitter.install(languages):wait(10 * 60 * 1000)

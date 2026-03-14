@@ -2,5 +2,6 @@ arch = [
     "httptoolkit",
     "chromium",
     "intellij-idea-community-edition",
-    "python"
+    "python",
+    "go"
 ]
