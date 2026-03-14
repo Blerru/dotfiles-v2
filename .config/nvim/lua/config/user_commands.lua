@@ -5,3 +5,7 @@ vim.api.nvim_create_user_command("UsePlainMode", function()
     -- Disable diagnostics
     vim.diagnostic.enable(false)
 end, {})
+
+vim.api.nvim_create_user_command("ShowKeymaps", function()
+    require("snacks").picker.keymaps()
+end, {})
