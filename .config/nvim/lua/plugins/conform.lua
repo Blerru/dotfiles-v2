@@ -35,7 +35,6 @@ return {
             -- Typst
             typst = { "prettypst" },
         },
-        format_on_save = {},
         default_format_opts = {
             timeout_ms = 500,
             async = true,
