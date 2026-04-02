@@ -1,4 +1,4 @@
-local enabled_theme = "catppuccin/nvim"
+local enabled_theme = "oskarnurm/koda.nvim"
 local theme_plugins = {
     {
         "dgox16/oldworld.nvim",
@@ -31,7 +31,7 @@ local theme_plugins = {
         name = "catppuccin",
         priority = 1000,
         opts = {
-            transparent_background = true,
+            transparent_background = false,
             custom_highlights = function(colors)
                 return {
                     Pmenu = { bg = colors.surface0 },
@@ -63,6 +63,34 @@ local theme_plugins = {
             require("tokyonight").setup(opts) -- calling setup is optional
 
             vim.cmd.colorscheme("tokyonight-night")
+        end,
+    },
+    {
+        "loctvl842/monokai-pro.nvim",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            require("monokai-pro").setup()
+            vim.cmd.colorscheme("monokai-pro")
+        end,
+    },
+    {
+        "oskarnurm/koda.nvim",
+        lazy = false, -- make sure we load this during startup if it is your main colorscheme
+        priority = 1000, -- make sure to load this before all the other start plugins
+        config = function(_, opts)
+            local koda = require("koda");
+
+            koda.setup(vim.tbl_extend("force", opts, {
+                transparent_background = true,
+                on_highlights = function(hl, c)
+                    local border_color = koda.blend(c.border, c.bg, 0.5)
+                    hl.WinSeparator = { fg =  border_color }
+                    hl.FloatBorder = { fg =  border_color }
+                end
+            }))
+
+            vim.cmd("colorscheme koda")
         end,
     },
 }

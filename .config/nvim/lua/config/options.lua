@@ -17,6 +17,7 @@ vim.opt.signcolumn = "yes:1"
 vim.opt.cursorline = true
 vim.opt.laststatus = 3
 vim.opt.winborder = "rounded"
+vim.opt.fillchars = { eob = " " }
 
 -- Text display
 vim.opt.wrap = false
