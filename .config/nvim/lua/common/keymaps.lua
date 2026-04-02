@@ -95,7 +95,7 @@ return {
                 mode = { "n" },
             },
             find_buffers = {
-                bind = "<leader>p",
+                bind = "<C-s-p>",
                 description = "Finds open buffers",
                 mode = { "n" },
             },

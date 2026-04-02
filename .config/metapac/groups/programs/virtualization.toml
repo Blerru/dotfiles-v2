@@ -1,0 +1,4 @@
+arch = [
+    "virtualbox",
+    "virtualbox-host-modules-arch"
+]

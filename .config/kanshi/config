@@ -20,5 +20,5 @@ profile desktop_single {
 
 profile desktop_double {
     output $primary_desktop enable
-    output $secondary_desktop disable
+    output $secondary_desktop enable
 }

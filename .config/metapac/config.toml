@@ -21,6 +21,7 @@ systemwide = true
     "programs/office",
     "programs/testing",
     "programs/media",
+    "programs/virtualization",
     "games/general",
     "games/roblox",
     "games/minecraft",

@@ -3,5 +3,6 @@ arch = [
     "chromium",
     "intellij-idea-community-edition",
     "python",
-    "go"
+    "go",
+    "cloc",
 ]

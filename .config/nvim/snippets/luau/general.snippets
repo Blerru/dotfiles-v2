@@ -6,10 +6,11 @@ snippet class
     local ${1:CopyAndPasteinator} = {}
     $1.__index = $1
 
-    type $1 = typeof(setmetatable({} :: {}, $1))
+    type $1Fields = {}
+    type $1 = typeof(setmetatable({} :: $1Fields, $1))
 
     function $1.new()
-        local self = {}
+        local self: $1Fields = {}
 
         return setmetatable(self, $1)
     end
@@ -56,3 +57,4 @@ snippet repeat
     until ${2:condition}
 snippet print
     print("${1:Hello world!}")
+

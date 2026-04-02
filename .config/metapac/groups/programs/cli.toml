@@ -15,4 +15,5 @@ arch = [
     "trash-cli",
     "fd",
     "zoxide",
+    "btop",
 ]
