@@ -43,6 +43,9 @@ return {
                 },
             },
         },
+        git = {
+            ignore = false
+        }
     },
     keys = {
         keymaps_helpers.make_lazy(
