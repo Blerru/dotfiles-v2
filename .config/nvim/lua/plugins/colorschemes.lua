@@ -1,29 +1,61 @@
-local enabled_theme = "oskarnurm/koda.nvim"
+local enabled_theme = "dgox16/oldworld.nvim"
 local theme_plugins = {
     {
         "dgox16/oldworld.nvim",
         lazy = false,
         priority = 1001,
         config = function(_, opts)
+            local old_world = require("oldworld")
             local palette = require("oldworld.palette")
 
-            require("oldworld").setup(vim.tbl_extend("force", opts, {
+            -- Setup highlight override for transparency
+            local use_transparent_background = true
+            local transparency_highlights = {
+                -- This isn't very DRY but it's an neovim theme config who cares :D
+                Normal = {
+                    bg = "none",
+                },
+                NormalNC = {
+                    bg = "none",
+                },
+                Pmenu = {
+                    bg = "none",
+                },
+                StatusLine = {
+                    bg = "none",
+                },
+                SignColumn = {
+                    bg = "none",
+                },
+            }
+
+            -- Setup highlight overrides for markdown with treesitter
+            local markdown_heading_highlights = {}
+            for heading_number = 1, 6 do
+                local treesitter_hl = "@markup.heading." .. heading_number .. ".markdown"
+                local old_world_hl = "markdownH" .. heading_number
+                markdown_heading_highlights[treesitter_hl] = {
+                    link = old_world_hl
+                }
+            end
+
+            old_world.setup(vim.tbl_extend("force", opts, {
                 variant = "default",
                 styles = {
                     booleans = { italic = true, bold = true },
                 },
                 integrations = {
                     treesitter = true,
+                    markdown = true,
                 },
-                highlight_overrides = {
-                    -- Telescope
-                    TelescopePreviewTitle = { fg = palette.fg, bg = palette.bg },
-                    TelescopeResultsTitle = { fg = palette.fg, bg = palette.bg },
-                    TelescopeBorder = { fg = palette.gray3, bg = palette.bg },
-                },
+                highlight_overrides = vim.tbl_extend(
+                    "error",
+                    use_transparent_background and transparency_highlights or {},
+                    markdown_heading_highlights
+                ),
             }))
 
-            vim.cmd.colorscheme("oldworld")
+            old_world.colorscheme()
         end,
     },
     {
@@ -79,15 +111,15 @@ local theme_plugins = {
         lazy = false, -- make sure we load this during startup if it is your main colorscheme
         priority = 1000, -- make sure to load this before all the other start plugins
         config = function(_, opts)
-            local koda = require("koda");
+            local koda = require("koda")
 
             koda.setup(vim.tbl_extend("force", opts, {
                 transparent_background = true,
                 on_highlights = function(hl, c)
-                    local border_color = koda.blend(c.border, c.bg, 0.5)
-                    hl.WinSeparator = { fg =  border_color }
-                    hl.FloatBorder = { fg =  border_color }
-                end
+                    local border_color = koda.blend(c.border, c.bg, 0.6)
+                    hl.WinSeparator = { fg = border_color }
+                    hl.FloatBorder = { fg = border_color }
+                end,
             }))
 
             vim.cmd("colorscheme koda")
