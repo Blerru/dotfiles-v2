@@ -72,8 +72,8 @@ layout {
 
     border {
         width 1
-        active-color "#363a4f"
-        inactive-color "#363a4f"
+        active-color "#444448"
+        inactive-color "#313134"
         urgent-color "#BD9191"
     }
 
@@ -83,7 +83,7 @@ layout {
 }
 
 animations {
-    // off
+    off
     slowdown 0.5
 }
 
@@ -193,6 +193,7 @@ binds {
     Mod+Z { maximize-column; }
     Mod+Shift+Z { fullscreen-window; }
     Mod+Ctrl+Z { expand-column-to-available-width; }
+    Mod+F { maximize-window-to-edges; }
     Mod+Minus { set-column-width "-10%"; }
     Mod+Equal { set-column-width "+10%"; }
     Mod+Shift+Minus { set-window-height "-10%"; }
@@ -280,7 +281,7 @@ clipboard {
 
 // Make wallpaper stationary, rather than moving with workspaces
 layer-rule {
-    match namespace="^swww-daemon$"
+    match namespace="^awww-daemon$"
     place-within-backdrop true
 }
 
@@ -293,7 +294,7 @@ window-rule {
     match is-floating=true
 
     border {
-        active-color "#5b6078"
+        active-color "#444448"
     }
 }
 
@@ -306,14 +307,11 @@ window-rule {
 // Hide password manager
 window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"discord"#
 
     block-out-from "screen-capture"
 }
 
-// Transparent terminal
 /-window-rule {
     match app-id=r#"^kitty$"#
-
-    draw-border-with-background false
-    opacity 0.94
 }

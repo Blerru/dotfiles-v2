@@ -7,7 +7,7 @@ systemctl enable --user --now pipewire-pulse.service
 systemctl enable --user --now wireplumber.service
 
 systemctl --user add-wants niri.service plasma-polkit-agent.service
-systemctl --user add-wants niri.service swww.service
+systemctl --user add-wants niri.service awww.service
 systemctl --user add-wants niri.service swaync.service
 systemctl --user add-wants niri.service swayidle.service
 systemctl --user add-wants niri.service xdg-desktop-portal.service

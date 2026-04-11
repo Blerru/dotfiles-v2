@@ -5,7 +5,7 @@ preview_wallpaper=$1
 original_wallpaper=$2
 
 fade_wallpaper() {
-    swww img \
+    awww img \
         --transition-step 20 \
         --transition-duration 0.1 \
         --transition-type simple \

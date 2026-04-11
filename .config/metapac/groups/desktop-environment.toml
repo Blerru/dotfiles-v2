@@ -16,7 +16,7 @@ arch = [
     # services
     "polkit-kde-agent",
     "xwayland-satellite",
-    "swww",
+    "awww",
     "swaync",
     "swayidle",
 

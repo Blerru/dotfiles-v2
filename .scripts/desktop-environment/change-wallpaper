@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-swww img \
+awww img \
     --transition-step 255 \
     --transition-duration 0.5 \
     --transition-type grow \

@@ -2,7 +2,7 @@
 
 scripts_directory=~/.scripts/desktop-environment
 wallpaper_directory=$1
-original_wallpaper=$(swww query | awk -F'image: ' '{print $2}')
+original_wallpaper=$(awww query | awk -F'image: ' '{print $2}')
 preview_wallpaper="$scripts_directory/wallpaper-selector/preview-wallpaper"
 
 open_dmenu() {
