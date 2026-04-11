@@ -1,0 +1,10 @@
+* {
+  red: #ea83a5; //
+  blue: #9ca2cf; //
+  text: #c9c7cd; //
+  subtext0: #b4b1ba; //
+  surface0: #353539;
+  mantle:  #262627;//
+  base: #161617; //
+}
+

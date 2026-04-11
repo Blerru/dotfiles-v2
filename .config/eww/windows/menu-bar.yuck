@@ -141,7 +141,7 @@
             :tooltip "Memory")
         (menu-bar-notification-area-indicator
             :icon "󰔏"
-            :visible {"${EWW_TEMPS["AMDGPU_EDGE"]}" != "null"} ; HACK: Surely there's a better way to do this :sob:
+            :visible {"${EWW_TEMPS["AMDGPU_EDGE"]}" != "null" && false} ; HACK: Surely there's a better way to do this :sob:
             :value "${EWW_TEMPS["AMDGPU_EDGE"]}°C"
             :class "gpu-temperature"
             :tooltip "GPU Temperature")

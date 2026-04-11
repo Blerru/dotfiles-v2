@@ -32,10 +32,12 @@ local theme_plugins = {
             -- Setup highlight overrides for markdown with treesitter
             local markdown_heading_highlights = {}
             for heading_number = 1, 6 do
-                local treesitter_hl = "@markup.heading." .. heading_number .. ".markdown"
+                local treesitter_hl = "@markup.heading."
+                    .. heading_number
+                    .. ".markdown"
                 local old_world_hl = "markdownH" .. heading_number
                 markdown_heading_highlights[treesitter_hl] = {
-                    link = old_world_hl
+                    link = old_world_hl,
                 }
             end
 
@@ -51,7 +53,11 @@ local theme_plugins = {
                 highlight_overrides = vim.tbl_extend(
                     "error",
                     use_transparent_background and transparency_highlights or {},
-                    markdown_heading_highlights
+                    markdown_heading_highlights,
+                    {
+                        CursorLine = { bg = palette.gray2 },
+                        WinBar = { bg = palette.bg },
+                    }
                 ),
             }))
 
