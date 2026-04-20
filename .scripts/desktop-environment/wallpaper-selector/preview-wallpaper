@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 scripts_directory=~/.scripts/desktop-environment
-preview_wallpaper=$1
-original_wallpaper=$2
+preview_wallpaper="$1"
+original_wallpaper="$2"
 
 fade_wallpaper() {
     awww img \
@@ -10,7 +10,7 @@ fade_wallpaper() {
         --transition-duration 0.1 \
         --transition-type simple \
         --transition-fps 60 \
-        $1
+        "$preview_wallpaper"
 }
 
 if [ -d "$preview_wallpaper" ]; then

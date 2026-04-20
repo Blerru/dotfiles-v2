@@ -7,4 +7,4 @@ awww img \
     --transition-pos top-right \
     --transition-angle 30 \
     --transition-fps 60 \
-    $1
+    "$1"

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 scripts_directory=~/.scripts/desktop-environment
-wallpaper_directory=$1
-original_wallpaper=$(awww query | awk -F'image: ' '{print $2}')
+wallpaper_directory="$1"
+original_wallpaper="$(awww query | awk -F'image: ' '{print $2}')"
 preview_wallpaper="$scripts_directory/wallpaper-selector/preview-wallpaper"
 
 open_dmenu() {
@@ -17,7 +17,7 @@ open_dmenu() {
 available_wallpapers=$(ls --group-directories-first -p "$wallpaper_directory" | cat)
 selected_wallpaper=$(echo "$available_wallpapers" | open_dmenu)
 
-if [ $(echo $selected_wallpaper | grep -c '/') -eq "0" ]; then
+if [ $(echo "$selected_wallpaper" | grep -c '/') -eq "0" ]; then
     $scripts_directory/change-wallpaper "${wallpaper_directory}/${selected_wallpaper}"
 else
     $scripts_directory/open-wallpaper-selector "$wallpaper_directory/$selected_wallpaper"
