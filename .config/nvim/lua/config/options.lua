@@ -31,6 +31,7 @@ vim.opt.spelllang = "en_us"
 -- Misc
 vim.opt.undofile = true
 vim.opt.foldenable = false
+vim.g.c_syntax_for_h = true
 
 -- Disabling Default File Explorer
 vim.g.loaded_netrw = 1

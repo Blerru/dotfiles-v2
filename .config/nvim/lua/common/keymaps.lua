@@ -119,11 +119,6 @@ return {
                 description = "Lists items in the git status",
                 mode = { "n" },
             },
-            lsp_symbols = {
-                bind = "<leader>fy",
-                description = "Lists symbols detected by the LSP in the current buffer.",
-                mode = { "n" },
-            },
             lsp_workspace_symbols = {
                 bind = "<leader>fY",
                 description = "Lists symbols detected by the LSP in the current workspace.",
@@ -142,17 +137,22 @@ return {
             goto_definition = { bind = "gd", description = "Goto Definition" },
             goto_declaration = { bind = "gD", description = "Goto Declaration" },
             references = {
-                bind = "gr",
+                bind = "grr",
                 nowait = true,
                 description = "References",
             },
             goto_implementation = {
-                bind = "gI",
+                bind = "gri",
                 description = "Goto Implementation",
             },
             goto_type_definition = {
-                bind = "gy",
-                description = "Goto T[y]pe Definition",
+                bind = "grt",
+                description = "Goto Type Definition",
+            },
+            lsp_symbols = {
+                bind = "gO",
+                description = "Lists symbols detected by the LSP in the current buffer.",
+                mode = { "n" },
             },
             --[[
             -- See https://neovim.io/doc/user/lsp.html#lsp-defaults for built-in LSP binds
@@ -351,4 +351,11 @@ return {
             mode = { "n", "v" },
         },
     },
+    zen_mode = {
+        toggle = {
+            bind = "<leader>zz",
+            description = "Toggles zen mode",
+            mode = { "n", "v" }
+        }
+    }
 }

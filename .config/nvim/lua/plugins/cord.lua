@@ -18,12 +18,12 @@ return {
             swap_icons = false,
         },
         timestamp = {
-            enabled = true,
+            enabled = false,
             reset_on_idle = false,
             reset_on_change = false,
         },
         idle = {
-            enabled = true,
+            enabled = false,
             timeout = 300000,
             show_status = true,
             ignore_focus = true,
@@ -35,56 +35,58 @@ return {
             icon = nil,
         },
         text = {
-            default = nil,
+            default = "",
             workspace = function(opts)
                 return "In " .. opts.workspace
             end,
-            viewing = function(opts)
-                return "Viewing " .. opts.filename
-            end,
-            editing = function(opts)
-                return "Editing " .. opts.filename
-            end,
-            file_browser = function(opts)
-                return "Browsing files in " .. opts.name
-            end,
-            plugin_manager = function(opts)
-                return "Managing plugins in " .. opts.name
-            end,
-            lsp = function(opts)
-                return "Configuring LSP in " .. opts.name
-            end,
-            docs = function(opts)
-                return "Reading " .. opts.name
-            end,
-            vcs = function(opts)
-                return "Committing changes in " .. opts.name
-            end,
-            notes = function(opts)
-                return "Taking notes in " .. opts.name
-            end,
-            debug = function(opts)
-                return "Debugging in " .. opts.name
-            end,
-            test = function(opts)
-                return "Testing in " .. opts.name
-            end,
-            diagnostics = function(opts)
-                return "Fixing problems in " .. opts.name
-            end,
-            games = function(opts)
-                return "Playing " .. opts.name
-            end,
-            terminal = function(opts)
-                return "Running commands in " .. opts.name
-            end,
-            dashboard = "Home",
+            -- viewing = function(opts)
+            --     return "Viewing " .. opts.filename
+            -- end,
+            -- editing = function(opts)
+            --     return "Editing " .. opts.filename
+            -- end,
+            -- file_browser = function(opts)
+            --     return "Browsing files in " .. opts.name
+            -- end,
+            -- plugin_manager = function(opts)
+            --     return "Managing plugins in " .. opts.name
+            -- end,
+            -- lsp = function(opts)
+            --     return "Configuring LSP in " .. opts.name
+            -- end,
+            -- docs = function(opts)
+            --     return "Reading " .. opts.name
+            -- end,
+            -- vcs = function(opts)
+            --     return "Committing changes in " .. opts.name
+            -- end,
+            -- notes = function(opts)
+            --     return "Taking notes in " .. opts.name
+            -- end,
+            -- debug = function(opts)
+            --     return "Debugging in " .. opts.name
+            -- end,
+            -- test = function(opts)
+            --     return "Testing in " .. opts.name
+            -- end,
+            -- diagnostics = function(opts)
+            --     return "Fixing problems in " .. opts.name
+            -- end,
+            -- games = function(opts)
+            --     return "Playing " .. opts.name
+            -- end,
+            -- terminal = function(opts)
+            --     return "Running commands in " .. opts.name
+            -- end,
+            -- dashboard = "Home",
         },
         buttons = {
             {
-                label = "View Repository",
+                label = function(opts)
+                    return opts.repo_url and "View Repository" or "View Git Server"
+                end,
                 url = function(opts)
-                    return opts.repo_url
+                    return opts.repo_url or "https://git.blru.sh/"
                 end,
             },
         },
