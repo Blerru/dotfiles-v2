@@ -8,7 +8,7 @@ preview_wallpaper="$scripts_directory/wallpaper-selector/preview-wallpaper"
 open_dmenu() {
     rofi \
         -dmenu \
-        -theme "catppuccin-bottom" \
+        -theme "aditya-wallpaper" \
         -window-title "wallpaper-selector" \
         -on-selection-changed "$preview_wallpaper '$wallpaper_directory/{entry}' '$original_wallpaper'" \
         -on-menu-canceled "$preview_wallpaper '$original_wallpaper' '$original_wallpaper'"

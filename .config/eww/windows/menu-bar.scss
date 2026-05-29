@@ -1,4 +1,4 @@
-@use "../themes/old-world.scss" as *;
+@use "../themes/bliss.scss" as *;
 
 $spacing-1: 0.125rem;
 $spacing-2: 0.25rem;
@@ -7,7 +7,7 @@ $spacing-4: 1rem;
 $border-radius: 8px;
 
 .menu-bar {
-    font-family: "JetBrainsMono NF", "JetBrains Mono", sans-serif;
+    font-family: "JetBrainsMono Nerd Font Propo", "JetBrains Mono", sans-serif;
     font-size: 11pt;
     font-weight: normal;
     color: $text;

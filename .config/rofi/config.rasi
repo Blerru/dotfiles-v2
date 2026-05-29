@@ -1,12 +1,10 @@
-@theme "catppuccin"
+@theme "aditya"
 
 configuration {
     modes: "window,drun,run";
-    font: "Jetbrains Mono 11";
     show-icons: false;
     terminal: "kitty";
     run-shell-command: "{terminal} -e {cmd}";
-    drun-display-format: "{name} [<span weight='light' size='small'><i>({generic})</i></span>]";
     disable-history: false;
     max-history-size: 25;
     kb-primary-paste: "Control+v";

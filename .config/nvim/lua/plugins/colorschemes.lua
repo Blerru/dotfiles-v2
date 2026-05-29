@@ -9,7 +9,7 @@ local theme_plugins = {
             local palette = require("oldworld.palette")
 
             -- Setup highlight override for transparency
-            local use_transparent_background = true
+            local use_transparent_background = false
             local transparency_highlights = {
                 -- This isn't very DRY but it's an neovim theme config who cares :D
                 Normal = {
@@ -19,7 +19,10 @@ local theme_plugins = {
                     bg = "none",
                 },
                 Pmenu = {
-                    bg = "none",
+                    bg = palette.gray1,
+                },
+                PmenuSel = {
+                    bg = palette.gray3,
                 },
                 StatusLine = {
                     bg = "none",
@@ -44,7 +47,12 @@ local theme_plugins = {
             old_world.setup(vim.tbl_extend("force", opts, {
                 variant = "default",
                 styles = {
-                    booleans = { italic = true, bold = true },
+                    booleans = { italic = true, bold = false },
+                    comments = {},
+                    keywords = {},
+                    identifiers = {},
+                    functions = { italic = true },
+                    variables = {},
                 },
                 integrations = {
                     treesitter = true,
@@ -55,7 +63,7 @@ local theme_plugins = {
                     use_transparent_background and transparency_highlights or {},
                     markdown_heading_highlights,
                     {
-                        CursorLine = { bg = palette.gray2 },
+                        CursorLine = { bg = palette.gray1 },
                         WinBar = { bg = palette.bg },
                     }
                 ),
@@ -120,9 +128,9 @@ local theme_plugins = {
             local koda = require("koda")
 
             koda.setup(vim.tbl_extend("force", opts, {
-                transparent_background = true,
+                transparent = true,
                 on_highlights = function(hl, c)
-                    local border_color = koda.blend(c.border, c.bg, 0.6)
+                    local border_color = koda.blend(c.border, c.bg, 0.2)
                     hl.WinSeparator = { fg = border_color }
                     hl.FloatBorder = { fg = border_color }
                 end,
