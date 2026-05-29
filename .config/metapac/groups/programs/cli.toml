@@ -3,6 +3,7 @@ arch = [
     "bat",
     "fastfetch",
     "man-db",
+    "man-pages",
     "jq",
     "unzip",
     "ripgrep",
@@ -16,4 +17,5 @@ arch = [
     "fd",
     "zoxide",
     "btop",
+    "eza",
 ]

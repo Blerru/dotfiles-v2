@@ -37,6 +37,8 @@ alias grep='grep --color=auto'
 alias restow-dotfiles='cd ~/.dotfiles; stow -R .; cd -'
 alias v='nvim'
 alias info='info --vi-keys'
+alias copwd='pwd | wl-copy'
+alias ls='eza'
 
 HISTCONTROL=ignorespace
 PS1='\[\e[92m\][\[\e[92m\]\u\[\e[92m\]@\[\e[92m\]\h\[\e[92m\]]\[\e[94m\][\[\e[94m\]\w\[\e[94m\]]\[\e[0m\] \[\e[37;2m\]\[\e[0m\] '
