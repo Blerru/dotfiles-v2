@@ -72,7 +72,7 @@ layout {
 
     border {
         width 1
-        active-color "#a198ff"
+        active-color "#e6b99d"
         inactive-color "#313134"
         urgent-color "#BD9191"
     }
@@ -83,7 +83,7 @@ layout {
 }
 
 animations {
-    // off
+    off
     // slowdown 0.5
 }
 
@@ -285,8 +285,16 @@ layer-rule {
     place-within-backdrop true
 }
 
+layer-rule {
+    match namespace="^blru-menu-bar$"
+
+    background-effect {
+        blur true
+    }
+}
+
 window-rule {
-    // geometry-corner-radius 4
+    geometry-corner-radius 4
     clip-to-geometry true
     tiled-state true
 }

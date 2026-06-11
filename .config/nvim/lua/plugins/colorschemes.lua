@@ -128,7 +128,7 @@ local theme_plugins = {
             local koda = require("koda")
 
             koda.setup(vim.tbl_extend("force", opts, {
-                transparent = true,
+                transparent = false,
                 on_highlights = function(hl, c)
                     local border_color = koda.blend(c.border, c.bg, 0.2)
                     hl.WinSeparator = { fg = border_color }

@@ -14,7 +14,7 @@ $border-radius: 8px;
 
     background: rgba(
         $color: $base,
-        $alpha: 0.9999999
+        $alpha: 0.5 /* 0.9999999 */
     ); // HACK: Make it so that the black background that is normally drawn behind the gtk window (either by the compositor, gtk or both?) isn't.
     // border-top: 1px solid #363a4f;
     padding: 0 $spacing-4;
