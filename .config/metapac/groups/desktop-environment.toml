@@ -7,6 +7,7 @@ arch = [
     "xdg-desktop-portal-gtk",
     "xdg-desktop-portal-wlr",
     "xdg-desktop-portal-gnome",
+    "xdg-desktop-portal-termfilechooser-hunkyburrito-git", # yazi as a file chooser
     "gnome-keyring",
     "adwaita-qt5-git",
     "adwaita-qt6-git",
