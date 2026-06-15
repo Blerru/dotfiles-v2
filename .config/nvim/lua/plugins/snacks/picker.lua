@@ -83,11 +83,37 @@ return {
             sources = {},
             focus = "input",
             layout = {
-                cycle = true,
-                --- Use the default layout or vertical if the window is too narrow
-                preset = function()
-                    return vim.o.columns >= 120 and "default" or "vertical"
-                end,
+                reverse = true,
+                layout = {
+                    box = "horizontal",
+                    backdrop = false,
+                    width = 0.8,
+                    height = 0.9,
+                    border = "none",
+                    {
+                        box = "vertical",
+                        {
+                            win = "list",
+                            title = " Results ",
+                            title_pos = "center",
+                            border = true,
+                        },
+                        {
+                            win = "input",
+                            height = 1,
+                            border = true,
+                            title = "{title} {live} {flags}",
+                            title_pos = "center",
+                        },
+                    },
+                    {
+                        win = "preview",
+                        title = "{preview:Preview}",
+                        width = 0.45,
+                        border = true,
+                        title_pos = "center",
+                    },
+                },
             },
             ---@class snacks.picker.matcher.Config
             matcher = {

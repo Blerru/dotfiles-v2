@@ -60,7 +60,6 @@ return {
                     "javascriptreact",
                     "less",
                     "sass",
-                    "scss",
                     "svelte",
                     "pug",
                     "typescriptreact",
@@ -91,6 +90,7 @@ return {
         end
 
         local capabilities = cmp_nvim_lsp.default_capabilities()
+        capabilities.textDocument.completion.completionItem.snippetSupport = false
         vim.lsp.config("*", {
             capabilities = capabilities,
         })

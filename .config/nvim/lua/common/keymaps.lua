@@ -337,6 +337,13 @@ return {
             mode = { "n", "v" },
         },
     },
+    oil = {
+        open = {
+            bind = "<leader>-",
+            description = "Open Oil",
+            mode = { "n", "v" },
+        },
+    },
     markview = {
         toggle = {
             bind = "<leader>em",

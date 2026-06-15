@@ -287,6 +287,7 @@ layer-rule {
 
 layer-rule {
     match namespace="^blru-menu-bar$"
+    match namespace="^swaync-control-center$"
 
     background-effect {
         blur true

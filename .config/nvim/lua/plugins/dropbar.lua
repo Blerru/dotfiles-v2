@@ -1,5 +1,6 @@
 return {
     "Bekaboo/dropbar.nvim",
+    enabled = false,
     opts = {
         bar = {
             enable = function(buf, win, info)

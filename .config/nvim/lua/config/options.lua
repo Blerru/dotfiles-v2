@@ -18,6 +18,7 @@ vim.opt.cursorline = true
 vim.opt.laststatus = 3
 vim.opt.winborder = "rounded"
 vim.opt.fillchars = { eob = " " }
+vim.opt.relativenumber = true
 
 -- Text display
 vim.opt.wrap = false

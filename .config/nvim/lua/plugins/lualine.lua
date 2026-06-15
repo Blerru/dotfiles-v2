@@ -33,7 +33,6 @@ return {
                     "CursorMoved",
                     "CursorMovedI",
                     "ModeChanged",
-                    "LspProgress",
                 },
             },
         },
@@ -44,28 +43,6 @@ return {
                 {
                     "filename",
                     path = 1,
-                },
-                {
-                    "lsp_status",
-                    icon = "",
-                    symbols = {
-                        -- Standard unicode symbols to cycle through for LSP progress:
-                        spinner = {
-                            "⠋",
-                            "⠙",
-                            "⠹",
-                            "⠸",
-                            "⠼",
-                            "⠴",
-                            "⠦",
-                            "⠧",
-                            "⠇",
-                            "⠏",
-                        },
-                        done = "✓",
-                        separator = " ",
-                    },
-                    ignore_lsp = {},
                 },
             },
             lualine_x = { "filetype" },

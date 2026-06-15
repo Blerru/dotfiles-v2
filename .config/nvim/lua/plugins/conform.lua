@@ -3,7 +3,7 @@ local keymaps_helpers = require("common.keymaps.helpers")
 
 return {
     "stevearc/conform.nvim",
-    event = { "BufWritePre" },
+    event = { "BufReadPre" },
     opts = {
         formatters_by_ft = {
             -- Prettier
