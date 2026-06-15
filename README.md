@@ -1,6 +1,6 @@
 # Dotfiles V2
 
-> [!ERROR] Deprecation Notice
+> [!NOTE] Deprecation Notice
 > As of 2026-06-15, this config is deprecated. It will no longer be receiving any updates.
 
 These are the dotfiles I daily drive.
